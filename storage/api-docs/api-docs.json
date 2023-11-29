@@ -1,0 +1,93 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "UZBEGIM API",
+        "version": "1.0"
+    },
+    "paths": {
+        "/api/categories": {
+            "get": {
+                "tags": [
+                    "Category API"
+                ],
+                "summary": "Get categories",
+                "operationId": "42f0db41000cda757d5c78de2fc2a22d",
+                "parameters": [
+                    {
+                        "name": "Key",
+                        "in": "header",
+                        "description": "User developer key",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Get categories",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "success": {
+                                            "description": "success",
+                                            "format": "boolean",
+                                            "default": "true"
+                                        },
+                                        "data": {
+                                            "description": "data",
+                                            "type": "array",
+                                            "items": {
+                                                "properties": {
+                                                    "id": {
+                                                        "description": "id",
+                                                        "type": "integer",
+                                                        "example": "1"
+                                                    },
+                                                    "title": {
+                                                        "description": "title",
+                                                        "type": "string",
+                                                        "example": "First Category"
+                                                    },
+                                                    "image": {
+                                                        "description": "image",
+                                                        "type": "string",
+                                                        "example": "upload/category/image/0cJogL8AnZejD0DtwMdc.jpg"
+                                                    }
+                                                },
+                                                "type": "object"
+                                            },
+                                            "example": [
+                                                {
+                                                    "id": 1,
+                                                    "title": "First Category",
+                                                    "image": "upload/category/image/0cJogL8AnZejD0DtwMdc.jpg"
+                                                },
+                                                {
+                                                    "id": 2,
+                                                    "title": "Second Category",
+                                                    "image": "upload/category/image/XATc96dh2z7ZDEhaOgvd.jfif"
+                                                }
+                                            ]
+                                        },
+                                        "message": {
+                                            "description": "message",
+                                            "format": "string",
+                                            "default": ""
+                                        },
+                                        "error_code": {
+                                            "description": "error_code",
+                                            "format": "integer",
+                                            "default": "0"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

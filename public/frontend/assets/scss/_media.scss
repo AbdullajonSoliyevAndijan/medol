@@ -1,0 +1,690 @@
+@media(max-width: 1600px){
+  .container{
+    margin: 0 100px;
+  }
+
+  .btn{
+    padding: 14px 40px;
+    font-size: 18px;
+  }
+
+  .header{
+    &__link{
+        font-size: 16px;
+        padding: 16px 0;
+    }
+
+    &__title{
+        font-size: 30px;
+    }
+
+    &__text{
+        font-size: 16px;
+    }
+
+    &__top{
+      gap: 15px;
+    }
+
+    &__slide{
+      gap: 10px;
+      display: grid!important;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+    }
+
+    &__img{
+        width: 100%;
+        object-fit: contain;
+    }
+
+    .logo{
+      height: 60px;
+      width: 200px;
+    }
+  }
+
+
+  .header-dots{
+   li button{
+        height: 16px;
+        width: 16px;
+    }
+  }
+
+  .title{
+    font-size: 25px;
+  }
+
+  .products{
+    &__title{
+      font-size: 18px;
+      width: 70%;
+      margin: auto;
+      text-align: center;
+      padding: 20px 0;
+
+    }
+
+    &__img{
+      height: 100px;
+    }
+
+    .btn{
+      padding: 14px 30px;
+      font-size: 15px;
+    }
+  }
+
+  .link{
+    font-size: 18px;
+    &::after,
+    &:hover::after{
+      height: 20px;
+      width: 20px;
+    }
+  }
+
+  .service{
+    &__inner{
+      padding: 60px 100px 60px;
+    }
+
+  }
+
+  .company{
+    &__content{
+      min-width: 550px;
+      padding: 20px 50px 20px 80px
+    }
+  }
+
+  .news{
+    &__title{
+      font-size: 16px;
+    }
+
+    &__text{
+      font-size: 14px;
+    }
+  }
+
+  .slider__arrow{
+    height: 30px;
+    width: 30px;
+  }
+
+  .footer{
+    &__title{
+      font-size: 18px;
+    }
+
+    &__list{
+      font-size: 14px;
+    }
+  }
+
+  .footer-contact{
+    gap: 20px;
+    font-size: 14px;
+  }
+
+  .text{
+    font-size: 14px;
+  }
+
+  .footer,
+  .header{
+    &__icon{
+      height: 40px;
+      width: 40px;
+
+      &_block{
+        width: fit-content;
+        height: fit-content;
+      }
+    }
+
+    &__phone{
+      line-height: 130%;
+    }
+  }
+}
+
+@media(max-width: 1200px){
+  .container{
+    margin: 0 70px;
+  }
+
+  // header top relocate
+
+  .header{
+    padding-bottom: 30px;
+    &__top{
+      display: grid;
+      grid-template-areas: 
+      'logo search dropdown dropdown'
+      'phones location facebook facebook'
+      ;
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    &__phones{
+      grid-area: phones;
+    }
+    &__search{
+      grid-area: search;
+      justify-self: center;
+    }
+    &__location{
+      grid-area: location;
+    }
+    &__facebook{
+      grid-area: facebook;
+      justify-self: end;
+    }
+    &-dropdown{
+      grid-area: dropdown;
+      justify-self: end;
+    }
+    .logo{
+      grid-area: logo;
+    }
+
+    &__link{
+      font-size: 14px;
+      padding: 16px 10px;
+      text-align: center;
+    }
+
+    .slick-track{
+      height: 340px;
+    }
+  }
+
+  .service{
+    &__inner{
+      gap: 40px;
+      padding: 40px 70px 40px;
+    }
+  }
+
+  .company{
+    &__content{
+      padding: 20px 50px 20px 100px;
+    }
+    &__circle{
+      margin: 17px;
+      border-width: 30px;
+      &_1{
+        height: 400px;
+        width: 400px;
+      }
+      &_2{
+        width: 300px;
+        height: 300px;
+      }
+      &_3{
+        height: 200px;
+        width: 200px;
+      }
+    }
+
+    &__logo{
+      width: 150px;
+      object-fit: contain;
+    }
+  }
+
+  .news{
+    .slick-track{
+      gap: 20px;
+    }
+
+    &__slider{
+      gap: 25px;
+    }
+  }
+
+  .footer{
+    &__top{
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  .footer-contact{
+    justify-content: center;
+  }
+
+}
+
+@media(max-width: 1000px){
+  .container{
+    margin: 0 50px;
+  }
+
+  .header{
+    &__top{
+      display: flex;
+    }
+
+    &__link{
+      padding: 10px;
+      font-size: 12px;
+      &:hover::after,
+      &.active::after{
+        height: 8px;
+        width: 8px;
+        top: 7px;
+        right: 7px;
+      }
+    }
+
+    &__phones,
+    &__location,
+    &__facebook,
+    &__search{
+      display: none!important;
+    }
+
+    .slick-track{
+      height: 600px;
+    }
+
+    &__slide{
+      display: flex!important;
+      flex-direction: column-reverse;
+    }
+
+    &__title{
+      width: 100%;
+    }
+
+    &__content{
+      text-align: center;
+    }
+
+    &__img{
+      height: 300px;
+    }
+  }
+
+  .header-btn{
+    display: flex;
+  }
+
+  .products{
+    &__inner{
+      gap: 30px;
+    }
+
+    &__title{
+      font-size: 16px;
+    }
+  }
+
+  .service{
+    height: 1100px;
+    &__inner{
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+      padding: 30px 50px 30px;
+    }
+
+    &__card{
+      flex-basis: 45%;
+    }
+
+    &__info{
+      padding: 10px 15px;
+    }
+  }
+
+  .company{
+    &__inner{
+      grid-template-columns: 1fr;
+      gap: 20px;
+      padding: 30px 0;
+      position: relative;
+    }
+    &__content{
+      padding: 20px 30px 20px;
+      border-radius: 50px;
+      min-width: 100%;
+      right: 0;
+      text-align: center;
+    }
+
+    &__wrapper,
+    &__circle{
+      display: none;
+    }
+
+    &__content-logo{
+      display: block;
+      height: 50px;
+      object-fit: contain;
+      width: fit-content;
+      margin: auto;
+    }
+
+  }
+
+  .partner{
+    &__slider{
+      gap: 20px;
+    }
+    &__item{
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+      padding: 20px;
+    }
+  }
+
+  
+}
+
+@media(max-width: 768px){
+  .container{
+    margin: 0 30px;
+  }
+
+  .header{
+    &__img{
+      height: 200px;
+    }
+
+    &__menu{
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      border-radius: 20px;
+    }
+
+    &__link{
+      border: 2px solid #f2f2f2;
+      &:nth-child(1),
+      &:nth-child(2),
+      &:nth-child(3){
+        border-bottom: none;
+      }
+
+      &:not(:last-child){
+        border-right: none;
+      }
+
+      &:nth-child(3){
+        border-right: 2px solid #f2f2f2;
+      }
+      &:last-child{
+        border: 2px solid #f2f2f2;
+      }
+
+      &:hover::after,
+      &.active::after{
+        height: 5px;
+        width: 5px;
+        top: 5px;
+        right: 5px;
+      }
+    }
+
+    .slick-track{
+      height: 470px;
+    }
+  }
+
+  .header-btn{
+    width: 40px;
+    height: 30px;
+    gap: 3px;
+    &__line{
+      height: 2.5px;
+    }
+  }
+
+  .products{
+    &__inner{
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .service{
+    &__inner{
+      padding: 20px 30px 20px;
+    }
+
+    &__img img{
+      height: 200px;
+    }
+  }
+
+  .company{
+    padding: 40px 0;
+  }
+
+  .news{
+    padding-bottom: 30px;
+    &__links{
+      align-items: center;
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+
+  .partner{
+    padding-bottom: 30px;
+    &__slider{
+      gap: 20px;
+      margin-top: 0px;
+    }
+    &__item{
+      grid-template-columns: repeat(2, 1fr);
+      padding: 20px;
+    }
+  }
+
+
+}
+
+@media(max-width: 620px){
+  .service{
+    height: 1850px;
+    &__card{
+      flex-basis: 100%;
+    }
+  }
+
+  .partner{
+    &__item{
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .footer-contact{
+    flex-direction: column;
+  }
+}
+
+@media(max-width: 480px){
+  .container{
+    margin: 0 20px;
+  }
+
+  .btn{
+    padding: 12px 25px;
+    font-size: 16px;
+  }
+
+  .title{
+    font-size: 20px;
+  }
+
+  .link{
+    font-size: 14px;
+  }
+
+  .header{
+    .logo{
+      height: 50px;
+      width: 150px;
+      margin: auto;
+    }
+
+    &__text{
+      font-size: 14px;
+      line-height: 150%;
+      padding: 0 20px;
+    }
+
+    &__title{
+      font-size: 20px;
+    }
+
+    &__menu{
+      margin-bottom: 20px;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    &__link{
+      &:nth-child(2){
+        border-right: 2px solid #f2f2f2;
+      }
+      &:nth-child(3){
+        border-right: none;
+      }
+      &:nth-child(4){
+        border-right: 2px solid #f2f2f2;
+        border-bottom: none;
+      }
+    }
+  }
+
+  .sidebar{
+    &__inner{
+      padding: 40px 20px 20px 20px;
+      width: 270px;
+    }
+  }
+
+  .header-dropdown{
+    &__list{
+      display: grid;
+      gap: 5px;
+      bottom: -80px;
+    }
+    &__item{
+      padding-bottom: 0;
+    }
+  }
+
+  .products{
+    padding: 30px 0;
+    &__inner{
+      grid-template-columns: 1fr;
+      padding: 30px 0;
+    }
+  }
+
+  .service{
+    height: 1520px;
+    &__inner{
+      padding: 20px;
+      margin-top: 30px;
+    }
+
+    &__title{
+      font-size: 16px;
+    }
+
+    &__text{
+      padding: 7px 0;
+    }
+
+  }
+
+  .company{
+    padding: 30px 0;
+    &__content{
+      padding: 20px;
+    }
+
+    &__text{
+      line-height: 150%;
+    }
+  }
+
+  .news{
+    padding-bottom: 30px;
+    &__slider{
+      padding: 30px 0;
+    }
+
+    &__links{
+      align-items: center;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    &__text{
+      padding: 0;
+    }
+  }
+
+  .footer{
+    &__top{
+      padding-bottom: 20px;
+      gap: 20px;
+    }
+
+    &__info{
+      flex-wrap: wrap;
+      gap: 15px;
+      text-align: justify;
+    }
+
+    &__end{
+      flex-direction: column;
+    }
+
+    &__bottom{
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+  }
+
+
+
+
+}
+
+@media(max-width: 400px){
+  .header{
+    &__top{
+      flex-wrap: wrap-reverse;
+    }
+    
+    &-btn{
+      order: -1;
+    }
+    
+    &-dropdown{
+      order: -1;
+    
+    }
+
+    &__text{
+      font-size: 12px;
+    }
+  }
+
+  .service{
+    height: 1450px;
+  }
+}
+
+
